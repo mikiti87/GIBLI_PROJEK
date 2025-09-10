@@ -112,4 +112,12 @@ Then you can run `npm start`.
 
 ---
 
+<<<<<<< HEAD
 This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
+=======
+<<<<<<< HEAD
+This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
+=======
+This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
+>>>>>>> 5cc42e3 (firts)
+>>>>>>> temp-fixes
