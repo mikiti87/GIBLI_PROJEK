@@ -135,9 +135,16 @@ This `README.md` provides a solid foundation for your project. You can expand it
 =======
 ## Daftar Endpoint
 - 'GET /status': Cek status API.
+- <img width="1280" height="719" alt="image" src="https://github.com/user-attachments/assets/abedbeec-2c70-4603-83f1-0105a8634b8b" />
 - 'GET /reviews': Mengambil semua ulasan.
+- <img width="1280" height="719" alt="image" src="https://github.com/user-attachments/assets/804a2282-0781-47bb-ae47-4343abe1a75e" />
 - 'GET /reviews/:id': Mengambil ulasan spesifik.
+- <img width="1280" height="719" alt="image" src="https://github.com/user-attachments/assets/d96c2490-58f6-4f3f-a8c9-01cdff58f56d" />
 - 'POST /reviews': Membuat ulasan baru.
+- <img width="1280" height="719" alt="image" src="https://github.com/user-attachments/assets/e63a266f-e5a1-4f5d-8af8-40179d319daf" />
 - 'PUT /reviews/:id': Memperbarui ulasan.
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7eac1371-65e2-413e-9d0c-05492ee972af" />
 - 'DELETE /reviews/:id': Menghapus ulasan.
+- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0eec747b-1e94-4550-9692-9493d24b19ef" />
+
 >>>>>>> a70e8283a6d7c71da01d6cd6afb8a3e7d238ca26
