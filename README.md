@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // server.js
 const express = require('express');
 const cors = require('cors');
@@ -6,6 +7,16 @@ const port = 3300;
 
 app.use(cors());
 app.use(express.json());
+=======
+# Proyek API Ulasan Film gibli - Kelompok 4
+
+## Anggota Kelompok
+- Baruna akbar rizqi
+- ahmad septa 
+- mathew hedriansyah
+- zenveropenopasa
+- hillmi nazwar 
+>>>>>>> 998965f7e6f303851ff6b91a6903626718ec719a
 
 //var reviews
 let reviews = [
@@ -78,6 +89,7 @@ app.put('/reviews/:id', (req, res) => {
   res.json(review);
 });
 
+<<<<<<< HEAD
 // DELETE hapus 
 app.delete('/reviews/:id', (req, res) => {
   const index = reviews.findIndex(r => r.id === parseInt(req.params.id));
@@ -91,3 +103,78 @@ app.delete('/reviews/:id', (req, res) => {
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
 });
+=======
+### Films
+
+*   **`GET /movies`**
+    *   Returns a list of all films.
+
+*   **`GET /movies/:id`**
+    *   Returns a single film by its `id`.
+
+*   **`GET /movies/title/:title`**
+    *   Returns a single film by its `title` (case-insensitive).
+
+*   **`POST /movies`**
+    *   Creates a new film.
+    *   Request body (JSON):
+        ```json
+        {
+            "title": "Your Film Title",
+            "director": "Director's Name",
+            "year": 2023
+        }
+        ```
+
+*   **`PUT /movies/:id`**
+    *   Updates an existing film's details.
+    *   Request body (JSON, can contain one or more fields):
+        ```json
+        {
+            "title": "Updated Film Title",
+            "director": "Updated Director's Name",
+            "birthyear": 2024
+        }
+        ```
+
+### Directors
+
+*   **`GET /directors`**
+    *   Returns a list of all directors.
+
+*   **`GET /directors/:id`**
+    *   Returns a single director by their `id`.
+
+*   **`POST /directors`**
+    *   Creates a new director.
+    *   Request body (JSON):
+        ```json
+        {
+            "name": "Director's Name",
+            "year": 1980
+        }
+        ```
+
+*   **`PUT /directors/:id`**
+    *   Updates an existing director's details.
+    *   Request body (JSON, can contain one or more fields):
+        ```json
+        {
+            "name": "Updated Director's Name",
+            "year": 1981
+        }
+        ```
+
+*   **`DELETE /directors/:id`**
+    *   Deletes a director by their `id`.
+
+---
+
+## Daftar Endpoint
+- 'GET /status': Cek status API.
+- 'GET /reviews': Mengambil semua ulasan.
+- 'GET /reviews/:id': Mengambil ulasan spesifik.
+- 'POST /reviews': Membuat ulasan baru.
+- 'PUT /reviews/:id': Memperbarui ulasan.
+- 'DELETE /reviews/:id': Menghapus ulasan.
+>>>>>>> 998965f7e6f303851ff6b91a6903626718ec719a
