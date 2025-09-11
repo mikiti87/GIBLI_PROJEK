@@ -120,6 +120,9 @@ Then you can run `npm start`.
 
 *   **`DELETE /directors/:id`**
     *   Deletes a director by their `id`.
+ 
+    *   <img width="1616" height="3804" alt="image" src="https://github.com/user-attachments/assets/e3b486f9-a6ef-411d-8830-33b50d8cf418" />
+
 
 ---
 
