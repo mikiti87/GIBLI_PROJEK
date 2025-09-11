@@ -1,109 +1,62 @@
-<<<<<<< HEAD
-// server.js
-const express = require('express');
-const cors = require('cors');
-const app = express();
-const port = 3300;
+# Gibli Project - Film and Director API
+# Gibli Project - API Film dan Sutradara
 
-app.use(cors());
-app.use(express.json());
-=======
-# Proyek API Ulasan Film gibli - Kelompok 4
+A simple RESTful API built with Node.js and Express to manage a collection of films and directors.
+Sebuah RESTful API sederhana yang dibuat dengan Node.js dan Express untuk mengelola koleksi film dan sutradara.
 
-## Anggota Kelompok
-- Baruna akbar rizqi
-- ahmad septa 
-- mathew hedriansyah
-- zenveropenopasa
-- hillmi nazwar 
->>>>>>> 998965f7e6f303851ff6b91a6903626718ec719a
+## Features
+## Fitur
 
-//var reviews
-let reviews = [
-  {
-    id: 1,
-    filmid: "2fhdf67d9dh789",
-    user: "Andi",
-    rating: 5,
-    comment: "Film animasi terbaik sepanjang masa!"
-  }
-];
+-   List, add, update, and retrieve films.
+-   List, add, update, and delete directors.
+-   In-memory data storage (data resets on server restart).
+-   Menampilkan, menambah, memperbarui, dan mengambil data film.
+-   Menampilkan, menambah, memperbarui, dan menghapus data sutradara.
+-   Penyimpanan data di memori (data akan di-reset saat server dimulai ulang).
 
-// Endpoint
-app.get('/status', (req, res) => {
-  res.json({ status: 'API berjalan dengan baik' });
-});
+## Installation
+## Instalasi
 
-// GET semua review
-app.get('/reviews', (req, res) => {
-  res.json(reviews);
-});
+1.  Clone the repository or download the source code.
+2.  Navigate to the project directory:
+1.  Clone repositori ini atau unduh kode sumbernya.
+2.  Masuk ke direktori proyek:
+    ```bash
+    cd gibli-projek
+    ```
+3.  Install the dependencies:
+3.  Install semua dependensi yang dibutuhkan:
+    ```bash
+    npm install
+    ```
 
-// GET review
-app.get('/reviews/:id', (req, res) => {
-  const review = reviews.find(r => r.id === parseInt(req.params.id));
-  if (review) {
-    res.json(review);
-  } else {
-    res.status(404).json({ error: 'Review tidak ditemukan' });
-  }
-});
+## Usage
+## Cara Menjalankan
 
-// POST review 
-app.post('/reviews', (req, res) => {
-  const { filmid, user, rating, comment } = req.body;
+To start the server, run the following command:
 
-  if (!filmid || !user || !rating || !comment) {
-    return res.status(400).json({ error: 'Semua field harus diisi' });
-  }
+```bash
+node server.js
+```
 
-  const newReview = {
-    id: reviews.length + 1,
-    filmid,
-    user,
-    rating,
-    comment
-  };
+The server will start and listen on `http://localhost:3000`.
 
-  reviews.push(newReview);
-  res.status(201).json(newReview);
-});
+You can also add a `start` script to your `package.json` for convenience:
+```json
+"scripts": {
+  "start": "node server.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+Then you can run `npm start`.
 
-//REvieew
-app.put('/reviews/:id', (req, res) => {
-  const review = reviews.find(r => r.id === parseInt(req.params.id));
-  if (!review) {
-    return res.status(404).json({ error: 'Review tidak ditemukan' });
-  }
+## API Endpoints
 
-  const { filmid, user, rating, comment } = req.body;
-  if (!filmid && !user && !rating && !comment) {
-    return res.status(400).json({ error: 'Minimal satu field harus diupdate' });
-  }
+### Home
 
-  review.filmid = filmid || review.filmid;
-  review.user = user || review.user;
-  review.rating = rating || review.rating;
-  review.comment = comment || review.comment;
+*   **`GET /`**
+    *   Returns a welcome message.
 
-  res.json(review);
-});
-
-<<<<<<< HEAD
-// DELETE hapus 
-app.delete('/reviews/:id', (req, res) => {
-  const index = reviews.findIndex(r => r.id === parseInt(req.params.id));
-  if (index === -1) {
-    return res.status(404).json({ error: 'Review tidak ditemukan' });
-  }
-  const deletedReview = reviews.splice(index, 1)[0];
-  res.json(deletedReview);
-});
-//SERVer
-app.listen(port, () => {
-  console.log(`Server berjalan di http://localhost:${port}`);
-});
-=======
 ### Films
 
 *   **`GET /movies`**
@@ -170,6 +123,16 @@ app.listen(port, () => {
 
 ---
 
+<<<<<<< HEAD
+This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
+=======
+<<<<<<< HEAD
+This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
+=======
+This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
+>>>>>>> 5cc42e3 (firts)
+>>>>>>> temp-fixes
+=======
 ## Daftar Endpoint
 - 'GET /status': Cek status API.
 - 'GET /reviews': Mengambil semua ulasan.
@@ -177,4 +140,4 @@ app.listen(port, () => {
 - 'POST /reviews': Membuat ulasan baru.
 - 'PUT /reviews/:id': Memperbarui ulasan.
 - 'DELETE /reviews/:id': Menghapus ulasan.
->>>>>>> 998965f7e6f303851ff6b91a6903626718ec719a
+>>>>>>> a70e8283a6d7c71da01d6cd6afb8a3e7d238ca26
