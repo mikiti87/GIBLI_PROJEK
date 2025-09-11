@@ -39,3 +39,18 @@ update (put)
   "rating": 3,
   "comment": "Setelah ditonton ulang, biasa aja"
 }
+
+hapus  delete
+ {
+    "id": 1,
+    "filmid": "2fhdf67d9dh789",
+    "user": "Andi",
+    "rating": 5,
+    "comment": "Film animasi terbaik sepanjang masa!"
+  }
+]
+
+
+
+
+
