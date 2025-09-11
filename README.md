@@ -1,9 +1,11 @@
-# Proyek API Ulasan Film - Kelompok 4
+# Proyek API Ulasan Film gibli - Kelompok 4
 
 ## Anggota Kelompok
-- Nama Anggota 1
-- Nama Anggota 2
-- Nama Anggota 3
+- Baruna akbar rizqi
+- ahmad septa 
+- mathew hedriansyah
+- zenveropenopasa
+- hillmi nazwar 
 
 
 ## Deskripsi Proyek
@@ -111,16 +113,6 @@ Then you can run `npm start`.
 
 ---
 
-<<<<<<< HEAD
-This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
-=======
-<<<<<<< HEAD
-This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
-=======
-This `README.md` provides a solid foundation for your project. You can expand it later with sections on testing, contributing guidelines, or deployment instructions as your project grows. Let me know if you have any other questions!
->>>>>>> 5cc42e3 (firts)
->>>>>>> temp-fixes
-=======
 ## Daftar Endpoint
 - 'GET /status': Cek status API.
 - 'GET /reviews': Mengambil semua ulasan.
@@ -128,4 +120,3 @@ This `README.md` provides a solid foundation for your project. You can expand it
 - 'POST /reviews': Membuat ulasan baru.
 - 'PUT /reviews/:id': Memperbarui ulasan.
 - 'DELETE /reviews/:id': Menghapus ulasan.
->>>>>>> a70e8283a6d7c71da01d6cd6afb8a3e7d238ca26
