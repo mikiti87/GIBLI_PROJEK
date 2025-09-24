@@ -19,8 +19,6 @@ const db = new sqlite3.Database(DBSOURCE, (err) => {
             if (err) {
                 console.log('Gagal membuat tabel', err.message);
             }
-
-            // ✅ Fixed: SELECT as string and proper syntax
             db.get("SELECT COUNT(*) AS count FROM movies", (err, row) => {
                 if (err) {
                     return console.error(err.message);
@@ -29,7 +27,7 @@ const db = new sqlite3.Database(DBSOURCE, (err) => {
                 if (row.count === 0) {
                     console.log("Menambahkan data awal ke tabel movies");
 
-                    // ✅ Fixed: INSERT as string
+               
                     const insert = "INSERT INTO movies (title, director, year) VALUES (?,?,?)";
 
                     db.run(insert, ["Parasite", "Bong Joon-ho", 2019]);
