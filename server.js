@@ -1,22 +1,14 @@
 // server.js
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3300;
+
+const port = process.env.PORT || 3000;
+
 
 app.use(cors());
 app.use(express.json());
-
-//var reviews
-let reviews = [
-  {
-    id: 1,
-    filmid: "2fhdf67d9dh789",
-    user: "Andi",
-    rating: 5,
-    comment: "Film animasi terbaik sepanjang masa!"
-  }
-];
 
 // Endpoint
 app.get('/status', (req, res) => {
