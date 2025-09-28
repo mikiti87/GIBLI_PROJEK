@@ -30,7 +30,45 @@ app.get('/movies', (req, res) => {
     });
 });
 
+// CREATE 
+app.post('/movies', (req, res) => {
+    const { title, genre, year } = req.body;
+    const sql = `INSERT INTO movies (title, genre, year) VALUES (?, ?, ?)`;
+    db.run(sql, [title, genre, year], function(err) {
+        if (err) return res.status(400).json({ error: err.message });
+        res.json({
+            message: 'Movie added successfully',
+            data: { id: this.lastID, title, genre, year }
+        });
+    });
+});
 
+// UPDATE 
+app.put('/movies/:id', (req, res) => {
+    const { title, genre, year } = req.body;
+    const { id } = req.params;
+    const sql = `UPDATE movies SET title=?, genre=?, year=? WHERE id=?`;
+    db.run(sql, [title, genre, year, id], function(err) {
+        if (err) return res.status(400).json({ error: err.message });
+        res.json({
+            message: 'Movie updated successfully',
+            changes: this.changes
+        });
+    });
+});
+
+// DELETE 
+app.delete('/movies/:id', (req, res) => {
+    const { id } = req.params;
+    const sql = `DELETE FROM movies WHERE id=?`;
+    db.run(sql, id, function(err) {
+        if (err) return res.status(400).json({ error: err.message });
+        res.json({
+            message: 'Movie deleted successfully',
+            changes: this.changes
+        });
+    });
+});
 
 
 // Start server
